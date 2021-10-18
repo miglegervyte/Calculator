@@ -99,6 +99,10 @@ Calculator.reset_memory()
 0
 ```
 
+## Docker file
+
+
+
 ## Licence 
 
 [MIT](https://github.com/miglegervyte/Calculator/blob/main/LICENSE)
