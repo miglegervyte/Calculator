@@ -4,8 +4,7 @@ Calculator is a tool performing basic mathematical operations.
 
 ## Installation 
 
-*
-*
+pip install git+https://github.com/miglegervyte/Calculator.git
 
 ## Functionality 
 
