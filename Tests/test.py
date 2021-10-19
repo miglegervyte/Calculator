@@ -5,7 +5,7 @@ import pytest
 def test_reset_memory():
     calc = Calculator()
     calc.add(10)
-    assert calc.reset_memory() == 0
+    assert calc.reset_memory() == 1
 
 
 def test_add():
