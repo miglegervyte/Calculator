@@ -12,7 +12,11 @@ class Calculator:
 
     def __init__(self, memory: float = None) -> None:
         self.__memory = memory
-
+        
+    @property
+    def memory(self) -> float:
+        return self.__memory
+     
     def add(self, nr: float, nr2: float = None) -> float:
         """
         If one number is provided: calculator performs addition of memorised and provided numbers.
