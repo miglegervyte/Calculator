@@ -11,6 +11,7 @@ class Calculator:
     """
 
     def __init__(self, memory: float = None) -> None:
+        memory = 0
         self.__memory = memory
         
     @property
@@ -23,10 +24,12 @@ class Calculator:
         If two numbers are provided: calculator performs addition between them.
         """
         if nr2 is None:
-            self.__memory += nr
+            result = self.__memory + nr
+            self.__memory = result
         else:
-            self.__memory = nr + nr2
-        return self.__memory
+            result = nr + nr2 
+            self.__memory = result
+        return result
 
     def subtract(self, nr: float, nr2: float = None) -> float:
         """
@@ -34,10 +37,12 @@ class Calculator:
         If two numbers are provided: calculator subtracts second provided number from first provided number.
         """
         if nr2 is None:
-            self.__memory -= nr
+            result = self.__memory - nr
+            self.__memory = result
         else:
-            self.__memory = nr - nr2
-        return self.__memory
+            result = nr - nr2
+            self.__memory = result
+        return result
 
     def multiply(self, nr: float, nr2: float = None) -> float:
         """
@@ -45,10 +50,12 @@ class Calculator:
         If two numbers are provided: calculator performs multiplication of provided numbers.
         """
         if nr2 is None:
-            self.__memory *= nr
+            result = self.__memory * nr
+            self.__memory = result
         else:
-            self.__memory = nr * nr2
-        return self.__memory
+            result = nr * nr2
+            self.__memory = result
+        return result
 
     def divide(self, nr: float, nr2: float = None) -> float:
         """
@@ -58,12 +65,14 @@ class Calculator:
         if nr2 is None:
             if nr == 0:
                 raise ZeroDivisionError("You can't divide by 0")
-            self.__memory /= nr
+            result = self.__memory / nr
+            self.__memory = result
         else:
             if nr2 == 0:
                 raise ZeroDivisionError("You can't divide by 0")
-            self.__memory = nr / nr2
-        return self.__memory
+            result = nr / nr2
+            self.__memory = result
+        return result
 
     def n_root(self, n: float, nr: float = None) -> float:
         """
@@ -74,10 +83,12 @@ class Calculator:
             raise ZeroDivisionError("The 0th root of any number is undefined")
         else:
             if nr is None:
-                self.__memory = self.__memory ** (1 / float(n))
+                result = self.__memory ** (1 / float(n))
+                self.__memory = result
             else:
-                self.__memory = nr ** (1 / float(n))
-        return self.__memory
+                result = nr ** (1 / float(n))
+                self.__memory = result
+        return result
 
     def check_memory(self) -> float:
         """
