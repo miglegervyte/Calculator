@@ -17,7 +17,7 @@ class Calculator:
     def memory(self) -> float:
         return self.__memory
      
-    def add(self, nr: float, nr2: float = None) -> float:
+    def add(self, nr: float, nr2: float) -> float:
         """
         If one number is provided: calculator performs addition of memorised and provided numbers.
         If two numbers are provided: calculator performs addition between them.
