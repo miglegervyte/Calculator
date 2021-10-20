@@ -10,8 +10,7 @@ class Calculator:
         are provided. If two arguments are provided mathematical operations are performed between them.
     """
 
-    def __init__(self, memory: float = None) -> None:
-        memory = 0
+    def __init__(self, memory: float = 0) -> None:
         self.__memory = memory
         
     @property
