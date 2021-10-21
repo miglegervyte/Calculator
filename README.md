@@ -98,9 +98,6 @@ Calculator.reset_memory()
 0
 ```
 
-## Docker file
-
-
 
 ## Licence 
 
